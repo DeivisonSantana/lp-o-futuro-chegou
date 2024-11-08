@@ -36,8 +36,128 @@ import slide4 from "@/assets/imagens/slides/slide-4.jpg";
 const slides = [slide1, slide2, slide3, slide4];
 </script>
 <template>
-    <div class="bg-cyan-700 w-full h-full xl:h-screen">
-        <div class="pt-[6rem] flex justify-center items-center gap-0">
+    <div class="bg-cyan-600 w-full h-full sm:h-full md:h-full xl:h-screen p-4 overflow-hidden ">
+        <div class="w-full flex flex-col lg:flex-row justify-center items-center">
+            <div id="slide-celular" class=" relative z-10">
+                <div id="celular" class="relative z-30">
+                    <img src="@/assets/imagens/celular-transparente-2.png"
+                        class="relative w-72 sm:w-[50%] md:w-[65%] lg:w-[70%] xl:w-[80%] 2xl:w-[80%] sm:left-32 md:left-20 lg:left-2 xl:left-2 2xl:-left-1 top-2 sm:-top-2 md:top-2 lg:top-20 xl:top-8 2xl:top-12 drop-shadow-lg inset-0"
+                        alt="" />
+
+                </div>
+                <div class="w-full">
+                    <divM
+                        class="border-4 rounded-full -left-[0.3rem] sm:left-[7rem] md:left-[4.4rem] lg:-left-[1rem] xl:-left-[1.6rem] 2xl:-left-[1rem] top-[6rem] sm:top-[4rem] md:top-[8rem] lg:top-[11rem] xl:top-[8.6rem] 2xl:top-[12rem] z-10 absolute border-yellow-500 w-[300px] h-[300px] sm:w-[340px] sm:h-[340px] md:w-[420px] md:h-[420px] lg:w-[400px] lg:h-[400px] xl:w-[560px] xl:h-[560px] 2xl:w-[520px] 2xl:h-[520px]">
+                    </divM>
+                </div>
+                <div
+                    class="right-[3rem] sm:right-[11.2rem] md:right-[12.4rem] lg:right-[13rem] xl:right-[12.4rem] 2xl:right-[12.8rem] top-[0.6rem] sm:-top-[0.2rem] md:top-[0.8rem] lg:top-[5.4rem] xl:top-[2.3rem] 2xl:top-[3.2rem] -rotate-[0.3deg] overflow-hidden z-20 w-[190px] h-[640px] sm:h-[420px] sm:w-[210px] md:h-[500px] md:w-[270px] lg:h-[600px] lg:w-[240px] xl:w-[320px] xl:h-[860px] 2xl:w-[330px] 2xl:h-[860px] absolute"
+                >
+                    <swiper
+                        :spaceBetween="30"
+                        :effect="'fade'"
+                        :navigation="false"
+                        :Pagination="false"
+                        :slidesPerView="1"
+                        :modules="modules"
+                        :thumbs="{ swiper: thumbsSwiper }"
+                        :autoplay="{
+                            delay: 2500,
+                            disableOnInteraction: false,
+                        }"
+                    >
+                        <SwiperSlide
+                            v-for="(slide, index) in slides"
+                            :key="index"
+                        >
+                            <div class="h-full">
+                                <img
+                                    :src="slide"
+                                    class="w-full h-[280px] sm:h-[300px] md:h-[425px] lg:h-[360px] xl:h-[498px] 2xl:h-[498px] border-2 object-cover mb-12 rounded-t-[2rem] sm:rounded-t-[2rem] md:rounded-t-[2.8rem] lg:rounded-t-[12%] xl:rounded-t-[12%] 2xl:rounded-t-[13%]"
+                                />
+                            </div>
+                        </SwiperSlide>
+                    </swiper>
+                    <swiper
+                        @swiper="setThumbsSwiper"
+                        :spaceBetween="1"
+                        :slidesPerView="5"
+                        :freeMode="true"
+                        :watchSlidesProgress="true"
+                        :modules="modules"
+                        class="relative z-30 -right-0 -top-[4.3rem] lg:-top-[4rem] xl:-top-[4rem] h-[80px] sm:h-[80px] md:h-[100px] xl:h-[245px] 2xl:h-[245px]"
+                    >
+                        <SwiperSlide
+                            v-for="(slide, index) in slides"
+                            :key="index"
+                            class="swiper-thumbnail"
+                        >
+                            <div class="h-full w-[100px]">
+                                <img
+                                    :src="slide"
+                                    class="h-[75px] sm:h-[70px] md:h-[60px] lg:h-[70px] xl:h-[95px] 2xl:h-[95px] w-[50px] sm:w-[50px] md:w-[60px] lg:w-[80px] xl:w-[400px] 2xl:w-[400px] relative top-3 border-2 object-cover mb-12 rounded-3xl rounded-b-3xl drop-shadow-lg"
+                                />
+                            </div>
+                        </SwiperSlide>
+                    </swiper>
+                </div>
+            </div>
+            <div class="texto-celular pt-12 ">
+                <div
+                class=" w-full "
+            >
+                <h2
+                    class="font-bold text-cyan-950 text-center text-xl sm:text-2xl lg:text-4xl relative uppercase  "
+                >
+                    O futuro chegou 
+                    mais cedo!
+                </h2>
+                <ul class="list-disc pt-12">
+                    <li class=" ">  <h2
+                                class="font-bold text-cyan-950 text-center text-md xl:text-xl uppercase "
+                            >
+                                Porto velho possui
+                                <span class="font-extrabold"
+                                    >coleta de resíduos sustentável</span
+                                >
+                                <br />pela bprimeira vez na história
+                            </h2></li>
+                            <br>
+                            <li>  <h2
+                                class="font-bold text-cyan-950 text-center text-sm xl:text-xl uppercase"
+                            >
+                                Porto velho possui
+                                <span class="font-extrabold"
+                                    >coleta de resíduos sustentável</span
+                                >
+                                <br />pela bprimeira vez na história
+                            </h2></li>
+                            <br>
+                            <li>  <h2
+                                class="font-bold text-cyan-950 text-center text-md xl:text-xl uppercase"
+                            >
+                                Porto velho possui
+                                <span class="font-extrabold"
+                                    >coleta de resíduos sustentável</span
+                                >
+                                <br />pela bprimeira vez na história
+                            </h2></li>
+                            <br>
+                            <li>  <h2
+                                class="font-bold text-cyan-950 text-center text-md xl:text-xl uppercase"
+                            >
+                                Porto velho possui
+                                <span class="font-extrabold"
+                                    >coleta de resíduos sustentável</span
+                                >
+                                <br />pela bprimeira vez na história
+                            </h2></li>
+                            <br>
+                </ul>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="pt-[6rem] flex justify-center items-center gap-0">
             <div class="relative z-0">
                 <div
                     class="border-4 rounded-full md:left-[2rem] lg:left-[4rem] xl:-left-[1.6rem] 2xl:-left-[4rem] top-[5rem] sm:top-[2rem] md:-top-[2rem] lg:top-[2rem] xl:top-[8.6rem] 2xl:top-[8rem] z-0 absolute border-yellow-500 w-[640px] h-[640px] sm:w-[200px] sm:h-[180px] md:w-[360px] md:h-[360px] lg:w-[480px] lg:h-[480px] xl:w-[560px] xl:h-[560px] 2xl:w-[600px] 2xl:h-[600px]"
@@ -182,40 +302,45 @@ const slides = [slide1, slide2, slide3, slide4];
                     </ul>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </template>
 <style scoped>
 .drop-shadow-lg {
-    --tw-drop-shadow: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04))
-        drop-shadow(0 4px 3px rgba(0, 0, 0, 0.4));
+    --tw-drop-shadow: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.4));
 }
+
 /* Exemplo de estilos para as thumbnails em arco */
 .swiper-thumbnail:nth-child(1) {
     transform: translateY(-17px) rotate(-2deg);
     top: 10px;
     left: 0px;
 }
+
 .swiper-thumbnail:nth-child(2) {
     transform: translateY(-13px) rotate(-1deg);
     top: 6px;
     left: 20px;
 }
+
 .swiper-thumbnail:nth-child(3) {
     transform: translateY(-7px) rotate(0deg);
     top: 0px;
     left: 40px;
 }
+
 .swiper-thumbnail:nth-child(4) {
     transform: translateY(0px) rotate(0deg);
     top: -7px;
     left: 60px;
 }
+
 .swiper-thumbnail:nth-child(5) {
     transform: translateY(0px) rotate(0deg);
     top: -7px;
     left: 0px;
 }
+
 :deep(.swiper-pagination) {
     position: relative;
     left: 50%;
@@ -224,6 +349,7 @@ const slides = [slide1, slide2, slide3, slide4];
     z-index: 1;
     width: auto !important;
 }
+
 :deep(.swiper-pagination-bullet) {
     width: 20px;
     height: 20px;
@@ -239,11 +365,13 @@ const slides = [slide1, slide2, slide3, slide4];
     color: #fff;
     background: yellow;
 }
+
 @keyframes zoomEffect {
     0% {
         transform: scale(1);
         opacity: 0.5;
     }
+
     100% {
         transform: scale(1.1);
         opacity: 1;
@@ -273,129 +401,153 @@ const slides = [slide1, slide2, slide3, slide4];
         top: 10px;
         left: 0px;
     }
+
     .swiper-thumbnail:nth-child(2) {
         transform: translateY(-13px) rotate(-1deg);
         top: 6px;
         left: 13px;
     }
+
     .swiper-thumbnail:nth-child(3) {
         transform: translateY(-7px) rotate(0deg);
         top: 0px;
         left: 26px;
     }
+
     .swiper-thumbnail:nth-child(4) {
         transform: translateY(0px) rotate(0deg);
         top: -7px;
         left: 38px;
     }
+
     .swiper-thumbnail:nth-child(5) {
         transform: translateY(0px) rotate(0deg);
         top: -7px;
         left: 0px;
     }
 }
+
 @media screen and (min-width: 768px) {
     .swiper-thumbnail:nth-child(1) {
         transform: translateY(-17px) rotate(-2deg);
         top: 10px;
         left: 0px;
     }
+
     .swiper-thumbnail:nth-child(2) {
         transform: translateY(-13px) rotate(-1deg);
         top: 6px;
         left: 13px;
     }
+
     .swiper-thumbnail:nth-child(3) {
         transform: translateY(-7px) rotate(0deg);
         top: 0px;
         left: 26px;
     }
+
     .swiper-thumbnail:nth-child(4) {
         transform: translateY(0px) rotate(0deg);
         top: -7px;
         left: 38px;
     }
+
     .swiper-thumbnail:nth-child(5) {
         transform: translateY(0px) rotate(0deg);
         top: -7px;
         left: 0px;
     }
 }
+
 @media screen and (min-width: 1024px) {
     .swiper-thumbnail:nth-child(1) {
         transform: translateY(-17px) rotate(-2deg);
         top: 10px;
         left: 0px;
     }
+
     .swiper-thumbnail:nth-child(2) {
         transform: translateY(-13px) rotate(-1deg);
         top: 6px;
         left: 13px;
     }
+
     .swiper-thumbnail:nth-child(3) {
         transform: translateY(-7px) rotate(0deg);
         top: 0px;
         left: 26px;
     }
+
     .swiper-thumbnail:nth-child(4) {
         transform: translateY(0px) rotate(0deg);
         top: -7px;
         left: 38px;
     }
+
     .swiper-thumbnail:nth-child(5) {
         transform: translateY(0px) rotate(0deg);
         top: -7px;
         left: 0px;
     }
 }
+
 @media screen and (min-width: 1280px) {
     .swiper-thumbnail:nth-child(1) {
         transform: translateY(-17px) rotate(-2deg);
         top: 10px;
         left: 0px;
     }
+
     .swiper-thumbnail:nth-child(2) {
         transform: translateY(-13px) rotate(-1deg);
         top: 6px;
         left: 13px;
     }
+
     .swiper-thumbnail:nth-child(3) {
         transform: translateY(-7px) rotate(0deg);
         top: 0px;
         left: 26px;
     }
+
     .swiper-thumbnail:nth-child(4) {
         transform: translateY(0px) rotate(0deg);
         top: -7px;
         left: 38px;
     }
+
     .swiper-thumbnail:nth-child(5) {
         transform: translateY(0px) rotate(0deg);
         top: -7px;
         left: 0px;
     }
 }
+
 @media screen and (min-width: 1536px) {
     .swiper-thumbnail:nth-child(1) {
         transform: translateY(-17px) rotate(-2deg);
         top: 10px;
         left: 0px;
     }
+
     .swiper-thumbnail:nth-child(2) {
         transform: translateY(-13px) rotate(-1deg);
         top: 6px;
         left: 13px;
     }
+
     .swiper-thumbnail:nth-child(3) {
         transform: translateY(-7px) rotate(0deg);
         top: 0px;
         left: 26px;
     }
+
     .swiper-thumbnail:nth-child(4) {
         transform: translateY(0px) rotate(0deg);
         top: -7px;
         left: 38px;
     }
+
     .swiper-thumbnail:nth-child(5) {
         transform: translateY(0px) rotate(0deg);
         top: -7px;

@@ -17,14 +17,14 @@
             >
                 <!-- Coluna da Esquerda - Linhas 2 e 3 -->
                 <div
-                    class="bg-yellow-400 text-xl text-cyan-900 font-bold p-4 rounded-lg shadow-md text-center row-start-1 lg:row-start-2 col-start-1 m-2 border-4 border-cyan-500"
+                    class="bg-yellow-400 text-sm sm:text-xl text-cyan-900 font-bold p-4 rounded-lg shadow-md text-center row-start-1 lg:row-start-2 col-start-1 m-2 border-4 border-cyan-500"
                 >
                     <span class="font-extrabold">
                         Contratação de novos médicos nas UPAs </span
                     >agilizam atendimento e melhoram a qualidade
                 </div>
                 <div
-                    class="bg-yellow-400 text-xl text-cyan-900 font-bold p-4 rounded-lg shadow-md text-center row-start-1 sm:row-start-2 lg:row-start-3 col-start-1 m-2 border-4 border-cyan-500"
+                    class="bg-yellow-400 text-sm sm:text-xl text-cyan-900 font-bold p-4 rounded-lg shadow-md text-center row-start-1 sm:row-start-2 lg:row-start-3 col-start-1 m-2 border-4 border-cyan-500"
                 >
                     <span class="font-extrabold">
                         130 milhões de medicamentos
@@ -35,7 +35,7 @@
 
                 <!-- Coluna do Meio - Linhas 1, 2, 3 e 4 (Círculo central na linha 2) -->
                 <div
-                    class="bg-yellow-400 text-xl text-cyan-900 row-span-1 lg:row-span-2 font-bold p-4 rounded-lg shadow-md text-center row-start-1 sm:col-start-2 m-2 border-4 border-cyan-500"
+                    class="bg-yellow-400 text-sm sm:text-xl text-cyan-900 row-span-1 lg:row-span-2 font-bold p-4 rounded-lg shadow-md text-center row-start-1 sm:col-start-2 m-2 border-4 border-cyan-500"
                 >
                     <span class="font-extrabold"> Filas zeradas</span> e
                     atendimento ampliado
@@ -67,7 +67,7 @@
                     </div>
                 </div>
                 <div
-                    class="bg-yellow-400 text-cyan-900 text-xl row-start-2 lg:row-span-2 font-bold p-4 rounded-lg shadow-md text-center lg:row-start-3 col-start-2 m-2 border-4 border-cyan-500"
+                    class="bg-yellow-400 text-cyan-900 text-sm sm:text-xl row-start-2 lg:row-span-2 font-bold p-4 rounded-lg shadow-md text-center lg:row-start-3 col-start-2 m-2 border-4 border-cyan-500"
                 >
                     <h2 class="relative top-0 lg:top-44">
                         <span class="font-extrabold">
@@ -80,7 +80,7 @@
 
                 <!-- Coluna da Direita - Linhas 2 e 3 -->
                 <div
-                    class="bg-yellow-400 text-xl text-cyan-900 font-bold p-4 rounded-lg shadow-md text-center lg:text-end row-start-1 lg:row-start-2 col-start-3 m-2 border-4 border-cyan-500"
+                    class="bg-yellow-400 text-sm sm:text-xl text-cyan-900 font-bold p-4 rounded-lg shadow-md text-center lg:text-end row-start-1 lg:row-start-2 col-start-3 m-2 border-4 border-cyan-500"
                 >
                     <span class="font-extrabold">
                         R$ 60 milhões investidos</span
@@ -88,7 +88,7 @@
                     em melhorias nas unidades de saúde
                 </div>
                 <div
-                    class="bg-yellow-400 text-cyan-900 font-bold p-4 text-xl rounded-lg shadow-md text-center lg:text-end row-start-2 lg:row-start-3 col-start-3 m-2 border-4 border-cyan-500"
+                    class="bg-yellow-400 text-cyan-900 font-bold p-4 text-sm sm:text-xl rounded-lg shadow-md text-center lg:text-end row-start-2 lg:row-start-3 col-start-3 m-2 border-4 border-cyan-500"
                 >
                     <span class="font-extrabold">
                         Aumento de 171% em frota
